@@ -280,7 +280,7 @@ section { padding: 84px 0; }
   to { transform: rotate(360deg); }
 }
 .medallion-badge {
-  position: absolute; bottom: 0.1%; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: -1%; left: 50%; transform: translateX(-50%);
   background: var(--maroon); color: var(--beige-soft); font-size: 26px; font-weight: 800; letter-spacing: 1.4px;
   text-transform: uppercase; padding: 4px 45px; border-radius: var(--radius-pill); box-shadow: var(--shadow-md);
   white-space: nowrap; border: 2px solid var(--gold-light);
