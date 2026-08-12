@@ -163,13 +163,13 @@ section { padding: 84px 0; }
   transition: box-shadow .35s var(--ease-smooth);
 }
 .navbar.is-scrolled { box-shadow: 0 6px 24px rgba(43,33,26,0.10); }
-.navbar .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.navbar .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: nowrap; }
 
-.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; min-width: 0; }
 .brand img { height: 52px; width: auto; transition: transform .3s var(--ease-smooth); }
 .brand:hover img { transform: scale(1.06); }
-.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 21px; color: var(--maroon-dark); line-height: 1.1; }
-.brand-name small { display: block; font-family: var(--font-body); font-weight: 600; font-size: 10.5px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-top: 2px; }
+.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 21px; color: var(--maroon-dark); line-height: 1.1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-name small { display: block; font-family: var(--font-body); font-weight: 600; font-size: 10.5px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .nav-links { display: flex; align-items: center; gap: 6px; }
 .nav-links > li { position: relative; }
@@ -200,7 +200,8 @@ section { padding: 84px 0; }
 .dropdown a:hover .dd-icon { transform: scale(1.1); }
 .dropdown .dd-icon svg { width: 18px; height: 18px; }
 
-.nav-actions { display: flex; align-items: center; gap: 4px; }
+.nav-actions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.nav-actions .icon-btn, .nav-actions .hamburger { flex-shrink: 0; }
 
 .nav-search { display: flex; align-items: center; }
 .nav-search-form {
@@ -258,13 +259,13 @@ section { padding: 84px 0; }
 
 .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
 .medallion {
-  position: relative; width: min(420px, 90%); aspect-ratio: 1/1; border-radius: 69%;
+  position: relative; width: min(420px, 90%); aspect-ratio: 1/1; border-radius: 60%;
   background: radial-gradient(circle at 42% 38%, var(--beige-soft), var(--sand-dark) 78%);
   display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);
 }
 .medallion::before {
   content: ""; position: absolute; inset: 10%; border-radius: 70%;
-  border: 2px dashed var(--gold); opacity: .8;
+  border: 3px dashed var(--gold); opacity: .8;
   animation: medallion-spin 18s linear infinite;
   z-index: 1;
 }
@@ -279,8 +280,8 @@ section { padding: 84px 0; }
   to { transform: rotate(360deg); }
 }
 .medallion-badge {
-  position: absolute; bottom: 6%; left: 50%; transform: translateX(-50%);
-  background: var(--maroon); color: var(--beige-soft); font-size: 19px; font-weight: 800; letter-spacing: 1.4px;
+  position: absolute; bottom: 0.1%; left: 50%; transform: translateX(-50%);
+  background: var(--maroon); color: var(--beige-soft); font-size: 26px; font-weight: 800; letter-spacing: 1.4px;
   text-transform: uppercase; padding: 4px 45px; border-radius: var(--radius-pill); box-shadow: var(--shadow-md);
   white-space: nowrap; border: 2px solid var(--gold-light);
   z-index: 3;
@@ -559,12 +560,19 @@ section { padding: 84px 0; }
   .cat-grid-4 { grid-template-columns: repeat(2, 1fr); }
   .cat-grid-3 { grid-template-columns: 1fr; }
   .nav-search-form.is-open { width: 160px; }
-  .brand-name { font-size: 17px; }
-  .brand img { height: 42px; }
+  .navbar { height: auto; min-height: var(--nav-h); }
+  .navbar .container { padding-top: 10px; padding-bottom: 10px; gap: 10px; }
+  .brand { gap: 8px; }
+  .brand img { height: 38px; }
+  .brand-name { font-size: 15.5px; max-width: 40vw; }
+  .nav-actions { gap: 0; }
 }
 
 @media (max-width: 600px) {
   .container { padding: 0 16px; }
+  .brand-name small { display: none; }
+  .brand-name { max-width: 34vw; }
+  .nav-search-form.is-open { width: 130px; }
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .pc-body { padding: 12px 12px 14px; gap: 4px; }
   .pc-name { font-size: 14.5px; }

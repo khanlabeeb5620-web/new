@@ -68,8 +68,7 @@ const PRODUCTS = [
     "images": [
       "images/products/chakki-fresh-atta/1.svg",
       "images/products/chakki-fresh-atta/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "premium-wheat-flour",
@@ -94,8 +93,7 @@ const PRODUCTS = [
     "images": [
       "images/products/premium-wheat-flour/1.svg",
       "images/products/premium-wheat-flour/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "sharbati-wheat-atta",
@@ -119,8 +117,7 @@ const PRODUCTS = [
     "images": [
       "images/products/sharbati-wheat-atta/1.svg",
       "images/products/sharbati-wheat-atta/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "classic-multigrain-atta",
@@ -144,8 +141,7 @@ const PRODUCTS = [
     "images": [
       "images/products/classic-multigrain-atta/1.svg",
       "images/products/classic-multigrain-atta/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "9-grain-power-flour",
@@ -169,8 +165,7 @@ const PRODUCTS = [
     "images": [
       "images/products/9-grain-power-flour/1.svg",
       "images/products/9-grain-power-flour/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "high-fibre-multigrain-atta",
@@ -194,8 +189,7 @@ const PRODUCTS = [
     "images": [
       "images/products/high-fibre-multigrain-atta/1.svg",
       "images/products/high-fibre-multigrain-atta/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "pure-barley-flour",
@@ -219,8 +213,7 @@ const PRODUCTS = [
     "images": [
       "images/products/pure-barley-flour/1.svg",
       "images/products/pure-barley-flour/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "roasted-barley-flour",
@@ -244,8 +237,7 @@ const PRODUCTS = [
     "images": [
       "images/products/roasted-barley-flour/1.svg",
       "images/products/roasted-barley-flour/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "cracked-wheat-coarse",
@@ -269,8 +261,7 @@ const PRODUCTS = [
     "images": [
       "images/products/cracked-wheat-coarse/1.svg",
       "images/products/cracked-wheat-coarse/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "cracked-wheat-medium",
@@ -294,8 +285,7 @@ const PRODUCTS = [
     "images": [
       "images/products/cracked-wheat-medium/1.svg",
       "images/products/cracked-wheat-medium/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "cracked-wheat-fine",
@@ -319,8 +309,7 @@ const PRODUCTS = [
     "images": [
       "images/products/cracked-wheat-fine/1.svg",
       "images/products/cracked-wheat-fine/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "corn-flour-makai-atta",
@@ -344,8 +333,7 @@ const PRODUCTS = [
     "images": [
       "images/products/corn-flour-makai-atta/1.svg",
       "images/products/corn-flour-makai-atta/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "rice-flour-chawal-atta",
@@ -369,8 +357,7 @@ const PRODUCTS = [
     "images": [
       "images/products/rice-flour-chawal-atta/1.svg",
       "images/products/rice-flour-chawal-atta/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "gram-flour-besan",
@@ -394,8 +381,7 @@ const PRODUCTS = [
     "images": [
       "images/products/gram-flour-besan/1.svg",
       "images/products/gram-flour-besan/2.svg"
-    ],
-    "sizePrices": {}
+    ]
   },
   {
     "slug": "semolina-sooji-rava",
@@ -419,30 +405,6 @@ const PRODUCTS = [
     "images": [
       "images/products/semolina-sooji-rava/1.svg",
       "images/products/semolina-sooji-rava/2.svg"
-    ],
-    "sizePrices": {}
-  },
-  {
-    "slug": "example",
-    "name": "example",
-    "category": "wheat-flour",
-    "price": 278,
-    "unit": "5kg",
-    "sizes": [
-      "1kg",
-      "5kg",
-      "10kg"
-    ],
-    "sizePrices": {},
-    "badge": "best",
-    "short": "example",
-    "desc": "example",
-    "tags": [
-      "fresh"
-    ],
-    "images": [
-      "images/products/example/1786530046312-841182.jpeg",
-      "images/products/example/1786530046315-786630.jpeg"
     ]
   }
 ];
