@@ -1,0 +1,47 @@
+<svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="High-Fibre Multigrain Atta packaging">
+  <defs>
+    <radialGradient id="bgradhigh-fibre-multigrain-attaa" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#F7F0DF"/>
+      <stop offset="100%" stop-color="#EADFC4"/>
+    </radialGradient>
+    <linearGradient id="bagGradhigh-fibre-multigrain-attaa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E1D0A6"/>
+      <stop offset="100%" stop-color="#CBB98E"/>
+    </linearGradient>
+    <linearGradient id="labelGradhigh-fibre-multigrain-attaa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B1220"/>
+      <stop offset="100%" stop-color="#4A0D16"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="460" fill="url(#bgradhigh-fibre-multigrain-attaa)"/>
+  <ellipse cx="200" cy="410" rx="120" ry="18" fill="#00000022"/>
+  <path d="M120 130 Q118 90 150 78 L250 78 Q282 90 280 130 L292 400 Q292 420 270 420 L130 420 Q108 420 108 400 Z"
+        fill="url(#bagGradhigh-fibre-multigrain-attaa)" stroke="#4A0D16" stroke-width="2"/>
+  <path d="M150 78 L152 56 Q200 44 248 56 L250 78 Z" fill="#D9B876" stroke="#4A0D16" stroke-width="1.5"/>
+  <path d="M120 130 L108 400" stroke="#00000018" stroke-width="3" fill="none"/>
+  <path d="M280 130 L292 400" stroke="#00000018" stroke-width="3" fill="none"/>
+  <path d="M126 140 Q200 128 274 140" stroke="#4A0D16" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.5"/>
+  <text x="200" y="112" text-anchor="middle" font-family="'Fraunces', serif" font-size="13" font-weight="600" fill="#4A0D16" letter-spacing="3">ALFAREED TRADERS</text>
+  <g transform="translate(200,178) scale(1.05)" opacity="1">
+<line x1="0" y1="-46" x2="0" y2="30" stroke="#6B1220" stroke-width="2.4" stroke-linecap="round"/>
+<ellipse cx="-7" cy="-40" rx="6.5" ry="4.2" transform="rotate(-35 -7 -40)" fill="#6B1220"/>
+<ellipse cx="7" cy="-40" rx="6.5" ry="4.2" transform="rotate(35 7 -40)" fill="#6B1220"/>
+<ellipse cx="-7" cy="-27" rx="6.5" ry="4.2" transform="rotate(-35 -7 -27)" fill="#6B1220"/>
+<ellipse cx="7" cy="-27" rx="6.5" ry="4.2" transform="rotate(35 7 -27)" fill="#6B1220"/>
+<ellipse cx="-7" cy="-14" rx="6.5" ry="4.2" transform="rotate(-35 -7 -14)" fill="#6B1220"/>
+<ellipse cx="7" cy="-14" rx="6.5" ry="4.2" transform="rotate(35 7 -14)" fill="#6B1220"/>
+<ellipse cx="-7" cy="-1" rx="6.5" ry="4.2" transform="rotate(-35 -7 -1)" fill="#6B1220"/>
+<ellipse cx="7" cy="-1" rx="6.5" ry="4.2" transform="rotate(35 7 -1)" fill="#6B1220"/>
+<ellipse cx="-7" cy="12" rx="6.5" ry="4.2" transform="rotate(-35 -7 12)" fill="#6B1220"/>
+<ellipse cx="7" cy="12" rx="6.5" ry="4.2" transform="rotate(35 7 12)" fill="#6B1220"/>
+<ellipse cx="-7" cy="25" rx="6.5" ry="4.2" transform="rotate(-35 -7 25)" fill="#6B1220"/>
+<ellipse cx="7" cy="25" rx="6.5" ry="4.2" transform="rotate(35 7 25)" fill="#6B1220"/>
+</g>
+  <rect x="116.0" y="230" width="168" height="118" rx="10" fill="url(#labelGradhigh-fibre-multigrain-attaa)" stroke="#B8873B" stroke-width="2"/>
+  <rect x="124.0" y="238" width="152" height="102" rx="6" fill="none" stroke="#D9B876" stroke-width="1" opacity="0.6"/>
+  <text x="200" y="268.0" text-anchor="middle" font-family="'Fraunces', serif" font-size="20" font-weight="600" fill="#F7F0DF" letter-spacing="0.2">High-Fibre</text>
+<text x="200" y="289.6" text-anchor="middle" font-family="'Fraunces', serif" font-size="20" font-weight="600" fill="#F7F0DF" letter-spacing="0.2">Multigrain Atta</text>
+  <text x="200" y="318" text-anchor="middle" font-family="'Karla', sans-serif" font-size="11" font-weight="600" fill="#D9B876" letter-spacing="2">MULTIGRAIN FLOUR</text>
+  <rect x="165" y="368" width="70" height="26" rx="13" fill="#F7F0DF" stroke="#6B1220" stroke-width="1.5"/>
+  <text x="200" y="385" text-anchor="middle" font-family="'Karla', sans-serif" font-size="12" font-weight="700" fill="#4A0D16" letter-spacing="1">5KG</text>
+</svg>

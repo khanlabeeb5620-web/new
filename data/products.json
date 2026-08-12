@@ -1,0 +1,436 @@
+{
+  "categories": [
+    {
+      "slug": "wheat-flour",
+      "name": "Wheat Flour",
+      "icon": "wheat",
+      "blurb": "Stone-ground chakki atta, milled fresh from whole wheat."
+    },
+    {
+      "slug": "multigrain-flour",
+      "name": "Multigrain Flour",
+      "icon": "grains",
+      "blurb": "Blended grains for a fibre-rich, wholesome roti."
+    },
+    {
+      "slug": "barley-flour",
+      "name": "Barley Flour",
+      "icon": "barley",
+      "blurb": "Pure jau atta, ground slow to keep its nutrition intact."
+    },
+    {
+      "slug": "cracked-wheat",
+      "name": "Cracked Wheat",
+      "icon": "cracked",
+      "blurb": "Daliya cracked to coarse, medium or fine for every recipe."
+    },
+    {
+      "slug": "other-flours",
+      "name": "Other Flours",
+      "icon": "grain",
+      "blurb": "Corn, rice, gram and semolina flours milled the honest way."
+    }
+  ],
+  "products": [
+    {
+      "slug": "chakki-fresh-atta",
+      "name": "Chakki Fresh Atta",
+      "category": "wheat-flour",
+      "price": 420,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "Best Seller",
+      "short": "Our signature whole-wheat atta, stone-ground the same day it ships.",
+      "desc": "Chakki Fresh Atta is milled in small batches on traditional stone chakkis to keep the bran and germ intact, giving every roti its full nutty flavour and soft texture. No additives, no bleaching -- just 100% whole wheat, ground fresh to order.",
+      "tags": [
+        "whole wheat",
+        "atta",
+        "chakki",
+        "fresh"
+      ],
+      "images": [
+        "images/products/chakki-fresh-atta/1.svg",
+        "images/products/chakki-fresh-atta/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "premium-wheat-flour",
+      "name": "Premium Wheat Flour",
+      "category": "wheat-flour",
+      "price": 460,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "A finer sift of whole wheat flour for softer parathas and naan.",
+      "desc": "Premium Wheat Flour is sifted an extra time after stone-grinding for a finer, more even texture -- ideal for parathas, naan and baking, while still carrying the full whole-grain nutrition of the wheat berry.",
+      "tags": [
+        "wheat",
+        "flour",
+        "fine",
+        "baking"
+      ],
+      "images": [
+        "images/products/premium-wheat-flour/1.svg",
+        "images/products/premium-wheat-flour/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "sharbati-wheat-atta",
+      "name": "Sharbati Wheat Atta",
+      "category": "wheat-flour",
+      "price": 540,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "New",
+      "short": "Milled from prized Sharbati wheat for a naturally sweet, golden roti.",
+      "desc": "Sharbati wheat is known for its golden colour and mild sweetness. We source it in small lots and grind it slowly on stone to protect its flavour, giving you a softer, richer roti than ordinary wheat.",
+      "tags": [
+        "sharbati",
+        "wheat",
+        "premium"
+      ],
+      "images": [
+        "images/products/sharbati-wheat-atta/1.svg",
+        "images/products/sharbati-wheat-atta/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "classic-multigrain-atta",
+      "name": "Classic Multigrain Atta",
+      "category": "multigrain-flour",
+      "price": 480,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "Best Seller",
+      "short": "Wheat blended with barley, gram and oats for a fibre-rich daily roti.",
+      "desc": "A everyday multigrain blend of wheat, barley, gram and oats, stone-ground together so every roti carries the fibre and protein of five grains without any change to your cooking routine.",
+      "tags": [
+        "multigrain",
+        "fibre",
+        "healthy"
+      ],
+      "images": [
+        "images/products/classic-multigrain-atta/1.svg",
+        "images/products/classic-multigrain-atta/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "9-grain-power-flour",
+      "name": "9-Grain Power Flour",
+      "category": "multigrain-flour",
+      "price": 620,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "New",
+      "short": "Nine grains and seeds milled together for a dense, protein-rich flour.",
+      "desc": "Wheat, barley, jowar, bajra, ragi, oats, soya, flaxseed and gram come together in this nine-grain blend -- ground on stone to preserve nutrition, for households that want more from every roti.",
+      "tags": [
+        "9 grain",
+        "protein",
+        "seeds"
+      ],
+      "images": [
+        "images/products/9-grain-power-flour/1.svg",
+        "images/products/9-grain-power-flour/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "high-fibre-multigrain-atta",
+      "name": "High-Fibre Multigrain Atta",
+      "category": "multigrain-flour",
+      "price": 560,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "Extra bran and oats folded in for households watching their fibre intake.",
+      "desc": "Formulated with extra wheat bran and rolled oats, this blend suits households looking to increase daily fibre without changing the taste of their roti too drastically.",
+      "tags": [
+        "fibre",
+        "bran",
+        "oats"
+      ],
+      "images": [
+        "images/products/high-fibre-multigrain-atta/1.svg",
+        "images/products/high-fibre-multigrain-atta/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "pure-barley-flour",
+      "name": "Pure Barley Flour (Jau Atta)",
+      "category": "barley-flour",
+      "price": 500,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "Best Seller",
+      "short": "100% barley, stone-ground for a light, digestion-friendly roti.",
+      "desc": "Jau atta ground from pure barley grain, prized for being easy on digestion and lower in gluten. Best mixed with wheat atta for softer rotis, or used on its own for barley khichdi and porridge.",
+      "tags": [
+        "barley",
+        "jau",
+        "atta"
+      ],
+      "images": [
+        "images/products/pure-barley-flour/1.svg",
+        "images/products/pure-barley-flour/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "roasted-barley-flour",
+      "name": "Roasted Barley Flour",
+      "category": "barley-flour",
+      "price": 540,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "Lightly roasted before milling for a nutty aroma, ready for sattu.",
+      "desc": "We roast the barley grain gently before stone-grinding it, drawing out a nutty aroma that's traditionally used for sattu drinks and roasted-flour sweets.",
+      "tags": [
+        "barley",
+        "roasted",
+        "sattu"
+      ],
+      "images": [
+        "images/products/roasted-barley-flour/1.svg",
+        "images/products/roasted-barley-flour/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "cracked-wheat-coarse",
+      "name": "Cracked Wheat - Coarse",
+      "category": "cracked-wheat",
+      "price": 380,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "Large-cut daliya, perfect for hearty porridge and pulao.",
+      "desc": "Whole wheat cracked into large, even pieces -- holds its bite well in daliya porridge, upma and pulao-style dishes.",
+      "tags": [
+        "daliya",
+        "cracked wheat",
+        "coarse"
+      ],
+      "images": [
+        "images/products/cracked-wheat-coarse/1.svg",
+        "images/products/cracked-wheat-coarse/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "cracked-wheat-medium",
+      "name": "Cracked Wheat - Medium",
+      "category": "cracked-wheat",
+      "price": 380,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "Best Seller",
+      "short": "Our most popular daliya cut, balanced for everyday breakfast bowls.",
+      "desc": "A medium cut that cooks quickly and evenly, making it the everyday choice for breakfast daliya, soups and khichdi.",
+      "tags": [
+        "daliya",
+        "cracked wheat",
+        "medium"
+      ],
+      "images": [
+        "images/products/cracked-wheat-medium/1.svg",
+        "images/products/cracked-wheat-medium/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "cracked-wheat-fine",
+      "name": "Cracked Wheat - Fine",
+      "category": "cracked-wheat",
+      "price": 380,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "Finely cracked for baby food, kheer and quick-cooking recipes.",
+      "desc": "Cracked to a fine grain that cooks down soft and smooth, ideal for baby food, daliya kheer and quick weeknight bowls.",
+      "tags": [
+        "daliya",
+        "cracked wheat",
+        "fine"
+      ],
+      "images": [
+        "images/products/cracked-wheat-fine/1.svg",
+        "images/products/cracked-wheat-fine/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "corn-flour-makai-atta",
+      "name": "Corn Flour (Makai Atta)",
+      "category": "other-flours",
+      "price": 460,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "Stone-ground makai atta for makki di roti and winter classics.",
+      "desc": "Ground fresh from whole corn kernels, our makai atta keeps its natural sweetness for a traditional makki di roti, best enjoyed with a spoon of white butter.",
+      "tags": [
+        "corn",
+        "makai",
+        "atta"
+      ],
+      "images": [
+        "images/products/corn-flour-makai-atta/1.svg",
+        "images/products/corn-flour-makai-atta/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "rice-flour-chawal-atta",
+      "name": "Rice Flour (Chawal Atta)",
+      "category": "other-flours",
+      "price": 400,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "",
+      "short": "Finely milled rice flour for crisp dosas and steamed dishes.",
+      "desc": "Milled from quality rice to a fine, even powder -- suited to dosas, steamed cakes and as a crisping agent in batters.",
+      "tags": [
+        "rice",
+        "chawal",
+        "flour"
+      ],
+      "images": [
+        "images/products/rice-flour-chawal-atta/1.svg",
+        "images/products/rice-flour-chawal-atta/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "gram-flour-besan",
+      "name": "Gram Flour (Besan)",
+      "category": "other-flours",
+      "price": 480,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "Best Seller",
+      "short": "Roasted-chickpea besan, ground fine for pakoras, cheela and sweets.",
+      "desc": "Ground from roasted chickpeas on stone, our besan carries a deep, nutty aroma that lifts pakoras, cheela, kadhi and traditional besan sweets.",
+      "tags": [
+        "besan",
+        "gram flour",
+        "chickpea"
+      ],
+      "images": [
+        "images/products/gram-flour-besan/1.svg",
+        "images/products/gram-flour-besan/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "semolina-sooji-rava",
+      "name": "Semolina (Sooji / Rava)",
+      "category": "other-flours",
+      "price": 340,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "badge": "New",
+      "short": "Golden, evenly milled sooji for halwa, upma and baking.",
+      "desc": "A fine, evenly milled semolina with a light golden colour -- perfect for halwa, upma, idli batter and baking.",
+      "tags": [
+        "sooji",
+        "rava",
+        "semolina"
+      ],
+      "images": [
+        "images/products/semolina-sooji-rava/1.svg",
+        "images/products/semolina-sooji-rava/2.svg"
+      ],
+      "sizePrices": {}
+    },
+    {
+      "slug": "example",
+      "name": "example",
+      "category": "wheat-flour",
+      "price": 278,
+      "unit": "5kg",
+      "sizes": [
+        "1kg",
+        "5kg",
+        "10kg"
+      ],
+      "sizePrices": {},
+      "badge": "best",
+      "short": "example",
+      "desc": "example",
+      "tags": [
+        "fresh"
+      ],
+      "images": [
+        "images/products/example/1786530046312-841182.jpeg",
+        "images/products/example/1786530046315-786630.jpeg"
+      ]
+    }
+  ]
+}
