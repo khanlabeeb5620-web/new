@@ -1,15 +1,35 @@
 // ==========================================================================
 // ALFAREED TRADERS -- CART
-// Stored in localStorage so it persists across pages without a backend.
-// Checkout hands the order off to WhatsApp as a pre-filled message.
+// Stored in sessionStorage so it survives normal navigation between pages
+// during a visit, but starts fresh on a manual refresh, a new tab, or once
+// the browser is closed -- so the next person on a shared device never
+// sees someone else's cart. Checkout hands the order off to WhatsApp as a
+// pre-filled message.
 // ==========================================================================
 
 const Cart = (function () {
   const STORAGE_KEY = "alfareed_cart";
 
+  // Clean up any cart saved by the old version of this site (which used
+  // localStorage and never expired), so it can't leak into a new session.
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+
+  // A manual page refresh starts with an empty cart -- carrying over items
+  // from whoever used this browser/device before you is confusing. Normal
+  // navigation between pages (add an item, then click through to another
+  // product or to checkout) still keeps the cart intact, only an actual
+  // reload clears it.
+  try {
+    const navEntries = performance.getEntriesByType("navigation");
+    const isReload = navEntries.length
+      ? navEntries[0].type === "reload"
+      : performance.navigation && performance.navigation.type === 1;
+    if (isReload) sessionStorage.removeItem(STORAGE_KEY);
+  } catch (e) {}
+
   function load() {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = sessionStorage.getItem(STORAGE_KEY);
       return raw ? JSON.parse(raw) : [];
     } catch (e) {
       return [];
@@ -17,7 +37,7 @@ const Cart = (function () {
   }
 
   function save(items) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     render();
   }
 

@@ -66,28 +66,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Gallery ---------- */
   const galleryImages = (product.images && product.images.length) ? product.images : [PLACEHOLDER_IMAGE];
+  let currentImgIndex = 0;
+
+  /* Backdrop: tint the product-detail section (through the related-products
+     area) with this product's photo behind a translucent beige overlay, so
+     the brand color scheme stays intact and all text stays readable. */
+  const pdSection = document.querySelector(".product-detail");
+  if (pdSection) {
+    const bgUrl = new URL(galleryImages[0], window.location.href).href;
+    const bgProbe = new Image();
+    bgProbe.onload = () => pdSection.style.setProperty("--pd-bg-image", `url("${bgUrl}")`);
+    bgProbe.onerror = () => pdSection.style.removeProperty("--pd-bg-image");
+    bgProbe.src = bgUrl;
+  }
+
+  const pdMainImg = document.getElementById("pdMainImg");
+  const pdPrevBtn = document.getElementById("pdPrevImg");
+  const pdNextBtn = document.getElementById("pdNextImg");
+  const pdCounter = document.getElementById("pdImgCounter");
+
   function renderGallery() {
-    document.getElementById("pdMainImg").src = galleryImages[0];
-    document.getElementById("pdMainImg").alt = `${product.name} - main photo`;
-    document.getElementById("pdMainImg").onerror = function () { this.onerror = null; this.src = PLACEHOLDER_IMAGE; };
+    pdMainImg.src = galleryImages[0];
+    pdMainImg.alt = `${product.name} - main photo`;
+    pdMainImg.onerror = function () { this.onerror = null; this.src = PLACEHOLDER_IMAGE; };
     document.getElementById("pdThumbs").innerHTML = galleryImages
       .map(
         (img, i) => `
-      <button type="button" class="pd-thumb ${i === 0 ? "active" : ""}" data-img="${img}">
+      <button type="button" class="pd-thumb ${i === 0 ? "active" : ""}" data-img="${img}" data-index="${i}">
         <img src="${img}" alt="${product.name} view ${i + 1}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">
       </button>`
       )
       .join("");
+
+    // The picture-switch controls only make sense with more than one photo.
+    const hasMultiple = galleryImages.length > 1;
+    pdPrevBtn.hidden = !hasMultiple;
+    pdNextBtn.hidden = !hasMultiple;
+    pdCounter.hidden = !hasMultiple;
   }
   renderGallery();
+
+  function showImage(index) {
+    currentImgIndex = ((index % galleryImages.length) + galleryImages.length) % galleryImages.length;
+    pdMainImg.src = galleryImages[currentImgIndex];
+    document.querySelectorAll(".pd-thumb").forEach((t, i) => t.classList.toggle("active", i === currentImgIndex));
+    if (!pdCounter.hidden) pdCounter.textContent = `${currentImgIndex + 1} / ${galleryImages.length}`;
+  }
+  showImage(0);
 
   document.getElementById("pdThumbs").addEventListener("click", (e) => {
     const btn = e.target.closest(".pd-thumb");
     if (!btn) return;
-    document.getElementById("pdMainImg").src = btn.getAttribute("data-img");
-    document.querySelectorAll(".pd-thumb").forEach((t) => t.classList.remove("active"));
-    btn.classList.add("active");
+    showImage(parseInt(btn.getAttribute("data-index"), 10));
   });
+
+  pdPrevBtn.addEventListener("click", () => showImage(currentImgIndex - 1));
+  pdNextBtn.addEventListener("click", () => showImage(currentImgIndex + 1));
 
   /* ---------- Info panel ---------- */
   document.getElementById("pdCategory").textContent = cat ? cat.name : "";

@@ -8,7 +8,11 @@
 <meta name="description" content="Fresh stone-ground flour from Al Fareed Traders.">
 <link rel="canonical" href="product.html">
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+<link rel="icon" type="image/png" href="images/icons/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="images/icons/favicon-16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="images/icons/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+<link rel="shortcut icon" href="images/icons/favicon.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,6 +100,13 @@
           <div class="pd-gallery">
             <div class="pd-gallery-main">
               <img id="pdMainImg" src="" alt="">
+              <button type="button" class="pd-nav pd-nav-prev" id="pdPrevImg" aria-label="Show previous photo" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+              </button>
+              <button type="button" class="pd-nav pd-nav-next" id="pdNextImg" aria-label="Show next photo" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+              <span class="pd-img-counter" id="pdImgCounter" hidden></span>
             </div>
             <div class="pd-thumbs" id="pdThumbs"></div>
           </div>
