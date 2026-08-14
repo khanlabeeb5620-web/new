@@ -17,7 +17,7 @@ const CATEGORIES = [
     "slug": "wheat-flour",
     "name": "Porridge",
     "icon": "wheat",
-    "blurb": "Dressed up with fresh fruits, honey, and nuts, or made savory with spices, broths, and proteins."
+    "blurb": "Dress up with fresh fruits, honey, and nuts, or made savory with spices, broths, and proteins."
   },
   {
     "slug": "multigrain-flour",
