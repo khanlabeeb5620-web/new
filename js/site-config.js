@@ -16,7 +16,7 @@ const SITE = {
   "email": "alfareed.pk@gmail.com",
   "address": "Alfareed Traders, 27-Km,Feroze pur Road Soa Asal,Lahore",
   "facebook": "https://facebook.com/",
-  "instagram": "https://www.instagram.com/alfareed.pk?igsh=cTBwMDB6aG5oa3ln"
+  "instagram": "https://www.instagram.com/alfareed.pk/"
 };
 
 function whatsappGeneralLink() {
