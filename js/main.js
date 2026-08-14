@@ -17,6 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
     el.href = whatsappGeneralLink();
   });
 
+  /* ---------- Social links (Facebook / Instagram) from site-config ---------- */
+  document.querySelectorAll("[data-social]").forEach((el) => {
+    const key = el.getAttribute("data-social");
+    const url = SITE[key];
+    if (url) {
+      el.href = url;
+    } else {
+      el.style.display = "none"; // hide the icon if no link is set
+    }
+  });
+
   /* ---------- Sticky navbar shadow on scroll ---------- */
   const navbar = document.getElementById("siteNavbar");
   if (navbar) {
