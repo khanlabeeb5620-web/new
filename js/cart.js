@@ -41,13 +41,13 @@ const Cart = (function () {
     render();
   }
 
-  function lineKey(slug, size) {
-    return `${slug}__${size}`;
+  function lineKey(slug, size, type) {
+    return `${slug}__${size}${type ? "__" + type : ""}`;
   }
 
-  function add(product, size, qty) {
+  function add(product, size, qty, type, image) {
     const items = load();
-    const key = lineKey(product.slug, size);
+    const key = lineKey(product.slug, size, type);
     const existing = items.find((i) => i.key === key);
     if (existing) {
       existing.qty += qty;
@@ -56,8 +56,9 @@ const Cart = (function () {
         key,
         slug: product.slug,
         name: product.name,
-        image: (product.images && product.images[0]) || PLACEHOLDER_IMAGE,
+        image: image || (product.images && product.images[0]) || PLACEHOLDER_IMAGE,
         size,
+        type: type || "",
         unitPrice: priceForSize(product, size),
         qty,
       });
@@ -98,7 +99,8 @@ const Cart = (function () {
     if (!items.length) return whatsappGeneralLink();
     let msg = `Hi ${SITE.name}, I'd like to place an order:\n\n`;
     items.forEach((i) => {
-      msg += `- ${i.name} (${i.size}) x${i.qty} -- ${money(i.unitPrice * i.qty)}\n`;
+      const variant = i.type ? `${i.size}, ${i.type}` : i.size;
+      msg += `- ${i.name} (${variant}) x${i.qty} -- ${money(i.unitPrice * i.qty)}\n`;
     });
     msg += `\nTotal: ${money(subtotal())}\n\nPlease confirm availability and delivery details.`;
     return `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(msg)}`;
@@ -136,7 +138,7 @@ const Cart = (function () {
         <img src="${i.image}" alt="${i.name}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">
         <div>
           <div class="ci-name">${i.name}</div>
-          <div class="ci-meta">${i.size}</div>
+          <div class="ci-meta">${i.type ? `${i.size} &middot; ${i.type}` : i.size}</div>
           <div class="ci-row">
             <div class="ci-qty">
               <button type="button" data-cart-dec="${i.key}" aria-label="Decrease quantity">${icon("minus")}</button>

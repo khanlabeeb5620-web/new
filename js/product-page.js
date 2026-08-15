@@ -27,7 +27,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cat = getCategory(product.category);
   let selectedSize = product.unit;
+  let selectedType = (product.types && product.types.length) ? product.types[0] : null;
   let qty = 1;
+
+  /** Photos to show for whichever type + pack size is currently selected.
+   *  Checked from most to least specific, so a shopper always sees a photo
+   *  that matches what they've actually picked:
+   *    1. This exact type + size combo   (e.g. "Mota" + "1kg")
+   *    2. This pack size, any type       (e.g. "1kg")
+   *    3. This type, any size            (e.g. "Mota") -- old behaviour
+   *    4. The product's main photos
+   */
+  function imagesForSelection() {
+    const variants = product.variants || {};
+    const comboKey = selectedType ? `${selectedType}::${selectedSize}` : null;
+    const sizeKey = `size:${selectedSize}`;
+
+    const combo = comboKey && variants[comboKey];
+    if (combo && combo.images && combo.images.length) return combo.images;
+
+    const bySize = variants[sizeKey];
+    if (bySize && bySize.images && bySize.images.length) return bySize.images;
+
+    const byType = selectedType && variants[selectedType];
+    if (byType && byType.images && byType.images.length) return byType.images;
+
+    return (product.images && product.images.length) ? product.images : [PLACEHOLDER_IMAGE];
+  }
 
   /* ---------- SEO: title + meta description + JSON-LD ---------- */
   document.title = `${product.name} | Alfareed Traders`;
@@ -65,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <span class="current">${product.name}</span>`;
 
   /* ---------- Gallery ---------- */
-  const galleryImages = (product.images && product.images.length) ? product.images : [PLACEHOLDER_IMAGE];
+  let galleryImages = imagesForSelection();
   let currentImgIndex = 0;
 
   /* Backdrop: tint the product-detail section (through the related-products
@@ -136,6 +162,45 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("pdPriceUnit").textContent = `per ${selectedSize} bag`;
   }
 
+  /** Re-picks the gallery photos for whatever type/size combo is now
+   *  selected, and re-tints the section backdrop to match. Called after
+   *  EITHER a type change or a size change, since both can affect which
+   *  photo is the right one to show. */
+  function refreshGalleryForSelection() {
+    galleryImages = imagesForSelection();
+    currentImgIndex = 0;
+    renderGallery();
+    showImage(0);
+    if (pdSection) {
+      const bgUrl = new URL(galleryImages[0], window.location.href).href;
+      const bgProbe = new Image();
+      bgProbe.onload = () => pdSection.style.setProperty("--pd-bg-image", `url("${bgUrl}")`);
+      bgProbe.onerror = () => pdSection.style.removeProperty("--pd-bg-image");
+      bgProbe.src = bgUrl;
+    }
+  }
+
+  /* ---------- Type selector (e.g. Mota / Bareekh) ---------- */
+  function switchToType(type) {
+    selectedType = type;
+    document.querySelectorAll(".pd-field #pdTypes .size-pill, #pdTypes .size-pill").forEach((b) =>
+      b.classList.toggle("active", b.getAttribute("data-type") === type)
+    );
+    refreshGalleryForSelection();
+  }
+
+  if (product.types && product.types.length) {
+    document.getElementById("pdTypeField").style.display = "";
+    document.getElementById("pdTypes").innerHTML = product.types
+      .map((t) => `<button type="button" class="size-pill ${t === selectedType ? "active" : ""}" data-type="${t}">${t}</button>`)
+      .join("");
+    document.getElementById("pdTypes").addEventListener("click", (e) => {
+      const btn = e.target.closest(".size-pill");
+      if (!btn) return;
+      switchToType(btn.getAttribute("data-type"));
+    });
+  }
+
   document.getElementById("pdSizes").innerHTML = product.sizes
     .map((s) => `<button type="button" class="size-pill ${s === selectedSize ? "active" : ""}" data-size="${s}">${s}</button>`)
     .join("");
@@ -145,9 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = e.target.closest(".size-pill");
     if (!btn) return;
     selectedSize = btn.getAttribute("data-size");
-    document.querySelectorAll(".size-pill").forEach((s) => s.classList.remove("active"));
+    document.querySelectorAll("#pdSizes .size-pill").forEach((s) => s.classList.remove("active"));
     btn.classList.add("active");
     updatePrice();
+    refreshGalleryForSelection();
   });
 
   /* ---------- Quantity stepper ---------- */
@@ -162,21 +228,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Add to cart + WhatsApp order ---------- */
   document.getElementById("pdAddToCart").addEventListener("click", () => {
-    Cart.add(product, selectedSize, qty);
-    showToast(`${product.name} (${selectedSize}) added to cart`);
+    Cart.add(product, selectedSize, qty, selectedType, galleryImages[0]);
+    showToast(`${product.name} (${selectedSize}${selectedType ? ", " + selectedType : ""}) added to cart`);
   });
 
   const waBtn = document.getElementById("pdWhatsapp");
   function updateWaLink() {
     const price = priceForSize(product, selectedSize);
+    const variant = selectedType ? `${selectedSize}, ${selectedType}` : selectedSize;
     const msg =
       `Hi ${SITE.name}, I'd like to order:\n\n` +
-      `- ${product.name} (${selectedSize}) x${qty} -- ${money(price * qty)}\n\n` +
+      `- ${product.name} (${variant}) x${qty} -- ${money(price * qty)}\n\n` +
       `Please confirm availability and delivery details.`;
     waBtn.href = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(msg)}`;
   }
   updateWaLink();
   document.getElementById("pdSizes").addEventListener("click", updateWaLink);
+  const pdTypesEl = document.getElementById("pdTypes");
+  if (pdTypesEl) pdTypesEl.addEventListener("click", updateWaLink);
   qtyInput.addEventListener("input", updateWaLink);
   document.getElementById("pdQtyMinus").addEventListener("click", updateWaLink);
   document.getElementById("pdQtyPlus").addEventListener("click", updateWaLink);

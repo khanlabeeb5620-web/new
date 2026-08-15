@@ -50,10 +50,12 @@ const PRODUCTS = [
       "Barley"
     ],
     "images": [
-      "images/products/al-fareed-barley-porridge/1786713036937-641254.jpeg",
-      "images/products/al-fareed-barley-porridge/1786713036944-855552.jpeg"
+      "images/products/al-fareed-barley-porridge/1786822520500-804756.jpg",
+      "images/products/al-fareed-barley-porridge/1786822523649-897485.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "al-fareed-barley-porridge-roasted",
@@ -71,10 +73,12 @@ const PRODUCTS = [
       "Barley"
     ],
     "images": [
-      "images/products/al-fareed-barley-porridge-roasted/1.svg",
-      "images/products/al-fareed-barley-porridge-roasted/2.svg"
+      "images/products/al-fareed-barley-porridge-roasted/1786822569393-31770.jpg",
+      "images/products/al-fareed-barley-porridge-roasted/1786822572523-731269.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "al-fareed-barley-flakes",
@@ -92,10 +96,12 @@ const PRODUCTS = [
       "Barley"
     ],
     "images": [
-      "images/products/al-fareed-barley-flakes/1.svg",
-      "images/products/al-fareed-barley-flakes/2.svg"
+      "images/products/al-fareed-barley-flakes/1786822645983-859016.jpg",
+      "images/products/al-fareed-barley-flakes/1786822648768-69625.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "al-fareed-wheatporridge",
@@ -114,10 +120,12 @@ const PRODUCTS = [
       "healthy"
     ],
     "images": [
-      "images/products/al-fareed-wheatporridge/1.svg",
-      "images/products/al-fareed-wheatporridge/2.svg"
+      "images/products/al-fareed-wheatporridge/1786822714390-1453.jpg",
+      "images/products/al-fareed-wheatporridge/1786822714390-285955.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "item",
@@ -136,10 +144,12 @@ const PRODUCTS = [
       "Protein"
     ],
     "images": [
-      "images/products/item/1.svg",
-      "images/products/item/2.svg"
+      "images/products/item/1786822790122-463919.jpg",
+      "images/products/item/1786822790123-321509.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "item-2",
@@ -158,10 +168,12 @@ const PRODUCTS = [
       "Flour"
     ],
     "images": [
-      "images/products/item-2/1.svg",
-      "images/products/item-2/2.svg"
+      "images/products/item-2/1786822824960-70683.jpg",
+      "images/products/item-2/1786822824960-147297.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "pure-barley-flour",
@@ -180,10 +192,12 @@ const PRODUCTS = [
       "Flour"
     ],
     "images": [
-      "images/products/pure-barley-flour/1.svg",
-      "images/products/pure-barley-flour/2.svg"
+      "images/products/pure-barley-flour/1786822851098-23082.jpg",
+      "images/products/pure-barley-flour/1786822851098-994847.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "item-3",
@@ -209,10 +223,12 @@ const PRODUCTS = [
       "Sorghum ( Jawar )"
     ],
     "images": [
-      "images/products/item-3/1.svg",
-      "images/products/item-3/2.svg"
+      "images/products/item-3/1786822884969-885244.jpg",
+      "images/products/item-3/1786822884970-760774.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   },
   {
     "slug": "item-4",
@@ -232,10 +248,50 @@ const PRODUCTS = [
       "All Purpose Flour"
     ],
     "images": [
-      "images/products/item-4/1.svg",
-      "images/products/item-4/2.svg"
+      "images/products/item-4/1786822953061-659376.jpg",
+      "images/products/item-4/1786822953062-751408.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [
+      "Mota",
+      "Bareekh"
+    ],
+    "variants": {
+      "Mota": {
+        "images": [
+          "images/products/item-4/variants/mota/1786823061170-310536.jpg"
+        ]
+      },
+      "Mota::0.5kg": {
+        "images": [
+          "images/products/item-4/variants/mota-0-5kg/1786823011430-126786.jpg",
+          "images/products/item-4/variants/mota-0-5kg/1786823011431-800105.jpg"
+        ]
+      },
+      "Mota::1kg": {
+        "images": [
+          "images/products/item-4/variants/mota-1kg/1786823001320-449041.jpg",
+          "images/products/item-4/variants/mota-1kg/1786823001320-838837.jpg"
+        ]
+      },
+      "Bareekh": {
+        "images": [
+          "images/products/item-4/variants/bareekh/1786823069925-81352.jpg"
+        ]
+      },
+      "Bareekh::0.5kg": {
+        "images": [
+          "images/products/item-4/variants/bareekh-0-5kg/1786823033121-345410.jpg",
+          "images/products/item-4/variants/bareekh-0-5kg/1786823033122-355228.jpg"
+        ]
+      },
+      "Bareekh::1kg": {
+        "images": [
+          "images/products/item-4/variants/bareekh-1kg/1786823039664-621347.jpg",
+          "images/products/item-4/variants/bareekh-1kg/1786823044097-566177.jpg"
+        ]
+      }
+    }
   },
   {
     "slug": "baisan",
@@ -244,7 +300,8 @@ const PRODUCTS = [
     "price": 260,
     "unit": "1kg",
     "sizes": [
-      "1kg"
+      "1kg",
+      "500g"
     ],
     "badge": "fresh",
     "short": "Smooth, finely ground besan made from quality chickpeas, perfect for a variety of traditional and everyday recipes.",
@@ -254,10 +311,25 @@ const PRODUCTS = [
       "Fresh"
     ],
     "images": [
-      "images/products/baisan/1.svg",
-      "images/products/baisan/2.svg"
+      "images/products/baisan/1786823361969-325650.jpg",
+      "images/products/baisan/1786823361970-855027.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {
+      "size:1kg": {
+        "images": [
+          "images/products/baisan/variants/size-1kg/1786823392342-120683.jpg",
+          "images/products/baisan/variants/size-1kg/1786823392343-385351.jpg"
+        ]
+      },
+      "size:500g": {
+        "images": [
+          "images/products/baisan/variants/size-500g/1786823399328-257108.jpg",
+          "images/products/baisan/variants/size-500g/1786823399329-808980.jpg"
+        ]
+      }
+    }
   },
   {
     "slug": "baisan-pakori",
@@ -277,10 +349,25 @@ const PRODUCTS = [
       "all Purpose Flour"
     ],
     "images": [
-      "images/products/baisan-pakori/1.svg",
-      "images/products/baisan-pakori/2.svg"
+      "images/products/baisan-pakori/1786823509405-693198.jpg",
+      "images/products/baisan-pakori/1786823509406-498252.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {
+      "size:400g": {
+        "images": [
+          "images/products/baisan-pakori/variants/size-400g/1786823515497-838697.jpg",
+          "images/products/baisan-pakori/variants/size-400g/1786823515497-683289.jpg"
+        ]
+      },
+      "size:200g": {
+        "images": [
+          "images/products/baisan-pakori/variants/size-200g/1786823518832-651450.jpg",
+          "images/products/baisan-pakori/variants/size-200g/1786823518833-432363.jpg"
+        ]
+      }
+    }
   },
   {
     "slug": "pota-sawayan",
@@ -299,9 +386,11 @@ const PRODUCTS = [
       "All Purpose Flour"
     ],
     "images": [
-      "images/products/pota-sawayan/1.svg",
-      "images/products/pota-sawayan/2.svg"
+      "images/products/pota-sawayan/1786823562025-617387.jpg",
+      "images/products/pota-sawayan/1786823562025-258883.jpg"
     ],
-    "sizePrices": {}
+    "sizePrices": {},
+    "types": [],
+    "variants": {}
   }
 ];

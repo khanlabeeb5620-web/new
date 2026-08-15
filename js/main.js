@@ -28,6 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  /* ---------- Contact info (address / phone / email) from site-config ---------- */
+  document.querySelectorAll("[data-field]").forEach((el) => {
+    const key = el.getAttribute("data-field");
+    if (SITE[key]) el.textContent = SITE[key];
+  });
+  document.querySelectorAll("[data-mailto-link]").forEach((el) => {
+    if (SITE.email) el.href = `mailto:${SITE.email}`;
+  });
+
   /* ---------- Sticky navbar shadow on scroll ---------- */
   const navbar = document.getElementById("siteNavbar");
   if (navbar) {
