@@ -83,8 +83,8 @@
         "Barley"
       ],
       "images": [
-        "images/products/al-fareed-barley-flakes/1786822645983-859016.jpg",
-        "images/products/al-fareed-barley-flakes/1786822648768-69625.jpg"
+        "images/products/al-fareed-barley-flakes/1786865157255-632907.jpg",
+        "images/products/al-fareed-barley-flakes/1786865157257-317392.jpg"
       ],
       "sizePrices": {},
       "types": [],
@@ -171,7 +171,7 @@
       "sizes": [
         "500g"
       ],
-      "badge": "Fresh",
+      "badge": "",
       "short": "Finely milled rice flour with a smooth texture, made from quality rice for fresh and versatile everyday use.",
       "desc": "Our Rice Flour is finely milled to produce a smooth, light texture suitable for a variety of culinary uses. Made from quality rice and prepared with precision, it retains its natural purity and freshness for a consistently reliable product.",
       "tags": [
@@ -195,7 +195,7 @@
       "sizes": [
         "2.5kg"
       ],
-      "badge": "Fresh",
+      "badge": "",
       "short": "A balanced blend of grains and seeds, finely milled into a wholesome flour for soft, nutritious rotis and everyday meals.",
       "desc": "Our Multigrain Flour brings together barley, wheat, corn, black chickpeas, pearl millet, chia seeds, oats, sorghum, and moringa in a carefully balanced blend. Each ingredient is combined in the right proportion before being milled into a smooth, wholesome flour.\nOur focus is not only on bringing together a variety of nutritious grains and seeds, but also on creating a flour that produces soft, enjoyable rotis—making it a practical and wholesome choice for everyday meals.",
       "tags": [
@@ -290,7 +290,7 @@
         "1kg",
         "500g"
       ],
-      "badge": "fresh",
+      "badge": "",
       "short": "Smooth, finely ground besan made from quality chickpeas, perfect for a variety of traditional and everyday recipes.",
       "desc": "Made from finely ground chickpeas, our Besan has a smooth texture and rich, natural character that makes it a versatile staple in the kitchen. Perfect for preparing pakoras, chilla, kadhi, boondi, ladoos, and a variety of traditional South Asian recipes, it blends easily into both everyday cooking and classic favourites",
       "tags": [
@@ -336,22 +336,22 @@
         "all Purpose Flour"
       ],
       "images": [
-        "images/products/baisan-pakori/1786823509405-693198.jpg",
-        "images/products/baisan-pakori/1786823509406-498252.jpg"
+        "images/products/baisan-pakori/1786865183805-496170.jpg",
+        "images/products/baisan-pakori/1786865183806-620911.jpg"
       ],
       "sizePrices": {},
       "types": [],
       "variants": {
         "size:400g": {
           "images": [
-            "images/products/baisan-pakori/variants/size-400g/1786823515497-838697.jpg",
-            "images/products/baisan-pakori/variants/size-400g/1786823515497-683289.jpg"
+            "images/products/baisan-pakori/variants/size-400g/1786865198104-982617.jpg",
+            "images/products/baisan-pakori/variants/size-400g/1786865198105-304175.jpg"
           ]
         },
         "size:200g": {
           "images": [
-            "images/products/baisan-pakori/variants/size-200g/1786823518832-651450.jpg",
-            "images/products/baisan-pakori/variants/size-200g/1786823518833-432363.jpg"
+            "images/products/baisan-pakori/variants/size-200g/1786865203012-4830.jpg",
+            "images/products/baisan-pakori/variants/size-200g/1786865203013-568064.jpg"
           ]
         }
       }
